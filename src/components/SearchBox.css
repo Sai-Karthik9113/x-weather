@@ -31,8 +31,34 @@ button {
 
 .weather-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
+}
+
+@media (max-width: 1200px) {
+    input {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .weather-cards > div {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        height: max-content;
+    }
+    .search-box {
+        flex-direction: column;
+    }
+    input {
+        width: 70%;
+    }
 }
